@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manage Promotion Rule</title>
+</head>
+<body>
+
+<H1>Manage Promotion Rule</H1>
+<a href="./">Back to Price Calculator</a><br/>
+	<br/><br/>
+List of Bill:
+<div th:each="b: ${bills}">
+Bill Id :<b th:text="${b.id}"></b>  
+total :<b th:text="${b.total}"></b> 
+--- > :<b th:text="${b?.rule?.name}"></b> 
+
+</div>
+
+</body>
+</html>

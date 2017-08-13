@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restaurant</title>
+</head>
+<body>
+
+<H1>Restaurant</H1>
+<h2>Price Calculator </h2>
+<a href=".">New Bill</a> === <a href="bills">List Bill</a>
+<br/>
+ <a href="rule">Manage Promotion Rule</a>
+<div>
+<br/><br/>
+
+<form action="." method="post">
+<table>
+	<tr>
+		<td>Number of customers : </td><td><input type="number" name="customerNumber" id="customerNumber" value="1"  /></td>
+		<td>Price per person : </td><td><input type="number" name="pricePerPerson" id="pricePerPerson" value="1" /></td>
+		<td>coupon code : </td><td>
+		<input type="text" name="couponCode" id="couponCode" />
+		</td>
+		<td colspan="2"><button type="submit">submit</button></td>
+	</tr>
+</table>
+</form>
+</div>
+
+<br/>
+<div>
+<h1>Total Payment =  <span th:text="${totals}"></span> </h1>
+</div>
+<br/><br/>
+Apply Promotion :
+<div th:each="b: ${bill}">
+	<div th:each="r: ${bill.rule}">
+		<b th:text="${r.id}"></b> <b th:text="${r.name}"></b>
+	</div>
+</div>
+
+
+</body>
+</html>
