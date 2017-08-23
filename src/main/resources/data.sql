@@ -1,3 +1,6 @@
+SET FOREIGN_KEY_CHECKS=0; -- to disable them
+--SET FOREIGN_KEY_CHECKS=1; -- to re-enable them
+
 delete from bill;
 delete from rule;
 
